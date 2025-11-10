@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌙 Tema global oscuro y limpio */
+body {
+  @apply text-gray-100 min-h-screen;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #0f172a, #020617);
+}
+
+/* 🎨 Estilos globales para botones */
+button {
+  @apply transition-all duration-200;
+}
+button:hover {
+  transform: scale(1.03);
+}
+
+/* 🧩 Inputs y formularios */
+input,
+select,
+textarea {
+  @apply bg-slate-800 border border-slate-700 text-white rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+form {
+  @apply space-y-4;
+}
+
+/* 🪶 Tarjetas globales (Home y Dashboard) */
+.card {
+  @apply bg-slate-800/80 backdrop-blur-md shadow-lg rounded-xl p-6 transition hover:shadow-blue-500/20;
+}
+
+/* 🌆 Fondo para LOGIN y REGISTRO (área pública) */
+.bg-public {
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 🌄 Fondo para PANEL, CREAR, EDITAR (área privada) */
+.bg-private {
+  background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 🔹 Capa translúcida con desenfoque (para ambos fondos) */
+.bg-overlay {
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
+  backdrop-filter: blur(10px);
+}
